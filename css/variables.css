@@ -1,0 +1,51 @@
+:root {
+  /** ======================
+     *    COLORS
+     *======================== **/
+
+  /* Brown palette */
+  --clr-brown-1: hsl(10deg 5% 25% / 100%);
+  --clr-brown-2: hsl(9deg 7% 21% / 100%);
+  --clr-brown-3: hsl(9deg 8% 16% / 100%);
+  --clr-brown-4: hsl(0deg 6% 15% / 100%);
+  --clr-brown-5: hsl(0deg 6% 13% / 100%);
+
+  /* Primary */
+  --clr-primary: hsl(25deg 88% 66% / 100%);
+  --clr-primary-light: hsl(25deg 88% 75% / 100%);
+
+  /* Neutrals */
+  --clr-white: hsl(0deg 0% 100% / 100%);
+  --clr-gray: hsl(0deg 2% 79% / 100%);
+
+  /* Accents */
+  --clr-accent-light: hsl(143deg 19% 49% / 100%);
+  --clr-accent: hsl(143deg 38% 37% / 100%);
+  --clr-accent-dark: hsl(144deg 30% 20% / 100%);
+
+  /* Additional Colors */
+  --clr-red: hsl(359deg 34% 37% / 100%);
+  --clr-burnt-orange: hsl(28deg 43% 37% / 100%);
+  --clr-teal: hsl(186deg 42% 37% / 100%);
+
+  /** =============================================
+     *            Fluid Typography Clamps
+     *        Viewport Range: 320px to 1330px
+     *============================================= **/
+
+  --fs-body-small: 0.875rem; /* 14px static */
+  --fs-body-regular: 1rem; /* 16px static */
+  --fs-body-medium: clamp(1.125rem, 1.0854rem + 0.198vw, 1.25rem); /* 18 → 20 */
+  --fs-body-large: clamp(1.25rem, 1.1708rem + 0.396vw, 1.5rem); /* 20 → 24 */
+  --fs-heading: clamp(1.5rem, 1.3416rem + 0.7921vw, 2rem); /* 24 → 32 */
+  --fs-section-heading: clamp(
+    2.25rem,
+    2.0124rem + 1.1881vw,
+    3rem
+  ); /* 36 → 48 */
+
+  --fs-title-small: clamp(3.75rem, 3.354rem + 1.9802vw, 5rem); /* 60 → 80 */
+  --fs-title-large: clamp(3.75rem, 2.5619rem + 5.9406vw, 7.5rem); /* 60 → 120 */
+  --ff-base: "Fira Sans", sans-serif;
+  --ff-heading: "Outfit", sans-serif;
+}
