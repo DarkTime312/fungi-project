@@ -1,3 +1,5 @@
+/* stylelint-disable declaration-block-no-duplicate-custom-properties */
+
 :root {
   /** ======================
      *    COLORS
@@ -48,4 +50,15 @@
   --fs-title-large: clamp(3.75rem, 2.5619rem + 5.9406vw, 7.5rem); /* 60 → 120 */
   --ff-base: "Fira Sans", sans-serif;
   --ff-heading: "Outfit", sans-serif;
+
+  /** ======================
+   *    SEMANTIC TOKENS
+   *======================== **/
+
+  --fs-body: var(--fs-body-regular);
+  --clr-body-text: var(--clr-white);
+
+  /* --clr-body-text: light-dark(var(--clr-brown-4), var(--clr-white)); */
+  --clr-body-background: var(--clr-brown-3);
+  --max-content-width: 1330px;
 }

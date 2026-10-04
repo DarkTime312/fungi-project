@@ -3,7 +3,82 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/main.css" />
+    <script src="js/script.js" defer></script>
     <title>Fungi Finders</title>
   </head>
-  <body></body>
+  <body>
+    <header class="page-header [ u-vertical-padding ]">
+      <div class="[ l-wrapper l-cluster l-cluster--repel ]">
+        <a href="/" class="page-header__link" aria-label="Home Page">
+          <img
+            src="images/fungi-finders.svg"
+            alt="Fungi finders logo"
+            class="page-header__logo"
+          />
+        </a>
+
+        <button
+          class="page-header__hamburger"
+          id="hamburgerBtn"
+          aria-label="Open navbar menu"
+          aria-expanded="false"
+          aria-controls="primaryNav"
+        >
+          <img src="images/hamburger.svg" alt="" aria-hidden="true" />
+        </button>
+
+        <nav
+          class="primary-nav"
+          id="primaryNav"
+          aria-label="Primary navigation"
+        >
+          <ul class="primary-nav__list [ l-flex ]">
+            <li class="primary-nav__item" style="--animation-order: 1">
+              <a href="#" class="primary-nav__link">Discover</a>
+            </li>
+            <li class="primary-nav__item" style="--animation-order: 2">
+              <a href="#" class="primary-nav__link">Mushroom guide</a>
+            </li>
+            <li class="primary-nav__item" style="--animation-order: 3">
+              <a href="#" class="primary-nav__link">FAQ</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <article class="hero [ u-vertical-padding u-text-center ]">
+        <div class="[ l-wrapper l-flow ]">
+          <h1 class="hero__title [ u-text-title-small ]">
+            Discover the World of
+            <span class="[ u-text-title-large u-text-primary ]"
+              >Mushroom Foraging</span
+            >
+          </h1>
+
+          <div
+            class="[ l-center l-flow ] [ u-text-body-medium ]"
+            style="--measure: 65ch"
+          >
+            <p>
+              Mushroom foraging is the art and science of identifying and
+              collecting wild mushrooms.
+            </p>
+            <p>
+              It's a practice that combines outdoor exploration botanical
+              knowledge, and culinary adventure. Foragers venture into forests,
+              fields, and even urban green spaces to discover these hidden
+              treasures.
+            </p>
+            <p>
+              But beware – this hobby requires careful study and respect for
+              nature, as some mushrooms can be dangerous if misidentified.
+            </p>
+          </div>
+        </div>
+      </article>
+    </main>
+  </body>
 </html>

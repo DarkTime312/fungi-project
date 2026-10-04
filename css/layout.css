@@ -1,0 +1,97 @@
+.l-wrapper {
+  /* Guarantees your max-width is preserved, pushing padding outward */
+  box-sizing: content-box;
+  max-inline-size: var(--max-content-width);
+  padding-inline: var(--space-s);
+  margin-inline: auto;
+}
+
+/* ==========================
+            THE CLUSTER 
+   ========================== */
+
+/* 
+Groups elements horizontally.
+It aligns groups of varying-width items (like buttons, tags, or navigation links) 
+and lets them naturally wrap to a new line when they run out of space.
+*/
+.l-cluster {
+  display: flex;
+  flex-wrap: var(--cluster-wrap, wrap);
+  gap: var(--cluster-space, var(--space-m));
+  align-items: var(--cluster-vertical-alignment, center);
+  justify-content: var(--cluster-horizontal-alignment, flex-start);
+}
+
+.l-cluster--repel {
+  --cluster-horizontal-alignment: space-between;
+}
+
+/* ==========================================================================
+                    FLOW / VERTICAL RHYTHM 
+   Handles spacing between sibling elements (The "Lobotomized Owl" technique).
+   ========================================================================== */
+
+.l-flow > * + * {
+  margin-block-start: var(--flow-space, 1em);
+}
+
+.l-flow-em-0-5 > * + * {
+  margin-block-start: 0.5em;
+}
+
+.l-flow-em-1 > * + * {
+  margin-block-start: 1em;
+}
+
+.l-flow-em-1-5 > * + * {
+  margin-block-start: 1.5em;
+}
+
+.l-flow-em-2 > * + * {
+  margin-block-start: 2em;
+}
+
+.l-flow-em-2-5 > * + * {
+  margin-block-start: 2.5em;
+}
+
+.l-flow-fluid-2xl > * + * {
+  margin-block-start: var(--space-2xl);
+}
+
+/* ==========================================================================
+                            FLEXBOX LAYOUTS
+   Micro/Macro layouts using Flexbox with configurable custom properties.
+   ========================================================================== */
+
+.l-flex {
+  display: flex;
+  flex-flow: var(--flex-direction, row) var(--flex-wrap, nowrap);
+  gap: var(--flex-row-gap, var(--flex-gap, 0))
+    var(--flex-col-gap, var(--flex-gap, 0));
+}
+
+/* ==========================
+            THE CENTER 
+   ========================== */
+
+/* 
+Controls horizontal constraints.
+It restricts the maximum width of content for readability 
+and perfectly centers it within the available space,
+often with built-in padding on the sides for smaller screens.
+*/
+.l-center {
+  box-sizing: content-box; /* So padding doesn't shrink the 60ch */
+  max-inline-size: var(--measure, 60ch);
+  padding-inline: var(--center-padding, 0);
+  margin-inline: auto;
+}
+
+/* The intrinsic modifier (Great for centering a single button or image!) */
+.l-center--intrinsic {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

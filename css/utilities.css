@@ -1,0 +1,78 @@
+/* =================================
+             Typography
+   ================================= */
+
+.u-text-body-small {
+  /* 14px */
+  font-size: var(--fs-body-small);
+}
+
+.u-text-body-regular {
+  /* 16px */
+  font-size: var(--fs-body-regular);
+}
+
+.u-text-body-medium {
+  /* 18 → 20 */
+  font-size: var(--fs-body-medium);
+}
+
+.u-text-body-large {
+  /* 20 → 24 */
+  font-size: var(--fs-body-large);
+}
+
+.u-text-heading {
+  /* 24 → 32 */
+  font-size: var(--fs-heading);
+}
+
+.u-text-section-heading {
+  /* 36 → 48 */
+  font-size: var(--fs-section-heading);
+}
+
+.u-text-title-small {
+  /* 60 → 80 */
+  font-size: var(--fs-title-small);
+}
+
+.u-text-title-large {
+  /* 60 → 120 */
+  font-size: var(--fs-title-large);
+}
+
+.u-text-center {
+  text-align: center;
+}
+
+/* =================================
+          Colors & Backgrounds
+   ================================= */
+
+.u-text-primary {
+  color: var(--clr-primary);
+}
+
+/* =================================
+            Padding & Margin
+   ================================= */
+
+.u-vertical-padding {
+  padding-block: var(--v-padding-start, var(--v-padding, var(--space-2xl-3xl)))
+    var(--v-padding-end, var(--v-padding, var(--space-2xl-3xl)));
+}
+
+/* mx = margin on the x-axis */
+.u-mx-auto {
+  margin-inline: auto;
+}
+
+/* =================================
+             Layout & Alignment
+   ================================= */
+
+.u-max-width {
+  width: 100%;
+  max-width: var(--max-w, 45rem);
+}
