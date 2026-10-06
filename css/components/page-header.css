@@ -15,16 +15,20 @@
 .primary-nav {
   --animation-bg-fade-speed: 500ms;
 
+  overflow: hidden;
+
   @media screen and (width < 760px) {
     position: absolute;
     inset-block-start: 0;
     inset-inline-end: 0;
     visibility: hidden;
+    padding-block-start: var(--space-s);
     padding-inline: var(--space-l);
-    font-size: var(--fs-body-medium);
+    font-family: var(--font-family-heading);
+    font-size: var(--font-size-l);
     font-weight: 700;
-    background-color: var(--clr-accent);
-    border-end-start-radius: 20px;
+    background-color: var(--color-surface-accent-base);
+    border-end-start-radius: var(--border-radius-l);
     opacity: 0;
     transition:
       opacity var(--animation-bg-fade-speed) ease-in-out,
@@ -45,7 +49,7 @@
     padding-block: var(--space-s);
 
     & + & {
-      border-block-start: 2px solid var(--clr-accent-light);
+      border-block-start: 2px solid var(--color-surface-accent-subtle);
     }
   }
 }

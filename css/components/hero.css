@@ -1,3 +1,4 @@
 .hero {
+  color: var(--color-text-strong);
   background: url("../../images/hero.webp") center center / cover no-repeat;
 }

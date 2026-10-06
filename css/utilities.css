@@ -2,44 +2,44 @@
              Typography
    ================================= */
 
-.u-text-body-small {
+.u-text-300 {
   /* 14px */
-  font-size: var(--fs-body-small);
+  font-size: var(--fs-300);
 }
 
-.u-text-body-regular {
+.u-text-400 {
   /* 16px */
-  font-size: var(--fs-body-regular);
+  font-size: var(--fs-400);
 }
 
-.u-text-body-medium {
+.u-text-500 {
   /* 18 → 20 */
-  font-size: var(--fs-body-medium);
+  font-size: var(--fs-500);
 }
 
-.u-text-body-large {
+.u-text-600 {
   /* 20 → 24 */
-  font-size: var(--fs-body-large);
+  font-size: var(--fs-600);
 }
 
-.u-text-heading {
+.u-text-700 {
   /* 24 → 32 */
-  font-size: var(--fs-heading);
+  font-size: var(--fs-700);
 }
 
-.u-text-section-heading {
+.u-text-800 {
   /* 36 → 48 */
-  font-size: var(--fs-section-heading);
+  font-size: var(--fs-800);
 }
 
-.u-text-title-small {
+.u-text-900 {
   /* 60 → 80 */
-  font-size: var(--fs-title-small);
+  font-size: var(--fs-900);
 }
 
-.u-text-title-large {
+.u-text-1000 {
   /* 60 → 120 */
-  font-size: var(--fs-title-large);
+  font-size: var(--fs-1000);
 }
 
 .u-text-center {
@@ -50,8 +50,8 @@
           Colors & Backgrounds
    ================================= */
 
-.u-text-primary {
-  color: var(--clr-primary);
+.u-text-brand-500 {
+  color: var(--clr-brand-500);
 }
 
 /* =================================

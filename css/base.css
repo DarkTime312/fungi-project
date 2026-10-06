@@ -1,36 +1,31 @@
 :root {
-  color-scheme: light dark;
+  color-scheme: dark;
 }
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+[data-theme="light"] {
+  color-scheme: light;
 }
 
-html {
-  scroll-behavior: smooth;
+[data-theme="dark"] {
+  color-scheme: dark;
 }
 
 body {
-  font-family: var(--ff-base);
-  font-size: var(--fs-body);
-  line-height: 1.6;
-  color: var(--clr-body-text);
-  background-color: var(--clr-body-background);
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-base);
+  color: var(--color-text-base);
+  background-color: var(--color-surface-base);
 }
 
 a {
-  color: inherit;
+  color: var(--color-text-strong);
   text-decoration: none;
   transition: color 200ms ease;
 }
 
 a:hover,
 a:focus-visible {
-  color: var(--clr-primary);
+  color: var(--color-text-brand-hover);
 }
 
 h1,
@@ -39,33 +34,12 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: var(--ff-heading);
-  line-height: 1.1;
-}
-
-ul,
-ol {
-  list-style: none;
-}
-
-img {
-  display: block;
-  max-width: 100%;
+  font-family: var(--font-family-heading);
+  color: var(--color-text-strong);
 }
 
 button {
   cursor: pointer;
   background-color: transparent;
   border: none;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
-    scroll-behavior: auto !important;
-    transition-duration: 0.01ms !important;
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-  }
 }
