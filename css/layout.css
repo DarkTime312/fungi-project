@@ -1,3 +1,26 @@
+/* ==========================================================================
+                    FLOW / VERTICAL RHYTHM 
+   Handles spacing between sibling elements (The "Lobotomized Owl" technique).
+   ========================================================================== */
+.l-flow {
+  /* Default Flow (1em) */
+  & > * + * {
+    margin-block-start: var(--flow-space, 1em);
+  }
+
+  /* NOTE: We target `> * + *` directly to prevent modified spacing from 
+      leaking into nested .l-flow containers. */
+
+  /* MODIFIER: Recursive (Targets ALL descendants, not just direct children) 
+     WARNING: Applies top margin to ALL nested siblings, which can accidentally
+             break alignment in horizontal flex containers. 
+  */
+
+  &[data-flow-recursive] * + * {
+    margin-block-start: var(--flow-space, 1em);
+  }
+}
+
 /* ==========================
             THE REGION 
    ========================== */
@@ -87,15 +110,6 @@ and lets them naturally wrap to a new line when they run out of space.
   &[data-cluster-type="repel"] {
     --cluster-horizontal-alignment: space-between;
   }
-}
-
-/* ==========================================================================
-                    FLOW / VERTICAL RHYTHM 
-   Handles spacing between sibling elements (The "Lobotomized Owl" technique).
-   ========================================================================== */
-
-.l-flow > * + * {
-  margin-block-start: var(--flow-space, 1em);
 }
 
 /* ==========================================================================
