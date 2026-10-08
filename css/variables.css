@@ -68,14 +68,11 @@
   --font-size-heading-s: var(--fs-700);
   --font-size-heading-m: var(--fs-800);
   --font-size-heading-l: var(--fs-900);
-  --font-size-heading-x: var(--fs-1000);
+  --font-size-heading-xl: var(--fs-1000);
 
   /* ---------- Typography: Font families ---------- */
   --font-family-body: var(--ff-fira-sans);
   --font-family-heading: var(--ff-outfit);
-
-  /* ---------- Layout ---------- */
-  --max-content-width: 1330px;
 
   /* ---------- Shape: Border radius ---------- */
   --border-radius-s: 0.25rem;
@@ -87,9 +84,26 @@
   :root {
     --color-text-base: light-dark(var(--clr-brown-800), var(--clr-gray-100));
     --color-text-strong: light-dark(var(--clr-brown-900), var(--clr-white));
+    --color-surface-low: light-dark(var(--clr-brown-300), var(--clr-brown-800));
+    --color-surface-lowest: light-dark(
+      var(--clr-brown-400),
+      var(--clr-brown-900)
+    );
     --color-surface-base: light-dark(
       var(--clr-brown-200),
       var(--clr-brown-700)
+    );
+    --color-surface-high: light-dark(
+      var(--clr-brown-100),
+      var(--clr-brown-600)
+    );
+    --color-surface-accent-subtle: light-dark(
+      var(--clr-green-600),
+      var(--clr-green-400)
+    );
+    --color-surface-accent-strong: light-dark(
+      var(--clr-green-400),
+      var(--clr-green-600)
     );
   }
 }

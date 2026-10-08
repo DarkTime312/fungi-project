@@ -1,0 +1,18 @@
+.card {
+  padding: var(--space-s);
+  background-color: var(--color-surface-high);
+  border-radius: var(--border-radius-m);
+}
+
+.card__image {
+  border-radius: var(--border-radius-m);
+}
+
+.card__title {
+  font-size: var(--font-size-heading-s);
+  color: light-dark(var(--clr-brand-500), var(--clr-white));
+}
+
+.card__title--brand {
+  color: var(--clr-brand-500);
+}

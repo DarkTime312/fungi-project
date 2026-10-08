@@ -1,8 +1,69 @@
+/* ==========================
+            THE REGION 
+   ========================== */
+
+/* 
+Creates consistent vertical pacing (rhythm) between major sections of a page.
+*/
+.l-region {
+  padding-block: var(
+      --region-padding-start,
+      var(--region-padding, var(--space-2xl-3xl))
+    )
+    var(--region-padding-end, var(--region-padding, var(--space-2xl-3xl)));
+
+  /* MODIFIERS */
+  &[data-region-space="tight"] {
+    --region-padding: var(--space-xs-s);
+  }
+
+  &[data-region-space="compact"] {
+    --region-padding: var(--space-l-xl);
+  }
+
+  &[data-region-space="spacious"] {
+    --region-padding: var(--space-2xl-4xl);
+  }
+}
+
+/* ============================================
+            THE WRAPPER & THE CENTER 
+   ============================================ */
+
+/* 
+Both layouts control horizontal constraints by restricting maximum width 
+and perfectly centering content within the available space. 
+
+WHY THEY ARE SEPARATED:
+- .l-wrapper is for MACRO layouts: It constrains entire page sections 
+  so the website doesn't stretch to infinity on large monitors. It uses 
+  built-in padding to prevent content from touching the viewport edges.
+- .l-center is for MICRO layouts (nested items): Used inside wrappers 
+  or other layouts to tightly constrain text to a comfortable reading 
+  measure (e.g., 65ch), or to center individual elements intrinsically.
+*/
+
 .l-wrapper {
   /* Guarantees your max-width is preserved, pushing padding outward */
   box-sizing: content-box;
-  max-inline-size: var(--max-content-width);
-  padding-inline: var(--space-s);
+  max-inline-size: var(--wrapper-max-width, 1130px);
+  padding-inline: var(--wrapper-padding, var(--space-s));
+  margin-inline: auto;
+
+  /* MODIFIERS */
+  &[data-wrapper-size="narrow"] {
+    --wrapper-max-width: 720px;
+  }
+
+  &[data-wrapper-size="wide"] {
+    --wrapper-max-width: 1330px;
+  }
+}
+
+.l-center {
+  box-sizing: content-box;
+  max-inline-size: var(--measure, 65ch);
+  padding-inline: var(--center-padding, 0);
   margin-inline: auto;
 }
 
@@ -18,13 +79,14 @@ and lets them naturally wrap to a new line when they run out of space.
 .l-cluster {
   display: flex;
   flex-wrap: var(--cluster-wrap, wrap);
-  gap: var(--cluster-space, var(--space-m));
+  gap: var(--cluster-gap, var(--space-m));
   align-items: var(--cluster-vertical-alignment, center);
   justify-content: var(--cluster-horizontal-alignment, flex-start);
-}
 
-.l-cluster--repel {
-  --cluster-horizontal-alignment: space-between;
+  /* MODIFIER: Repel */
+  &[data-cluster-type="repel"] {
+    --cluster-horizontal-alignment: space-between;
+  }
 }
 
 /* ==========================================================================
@@ -36,33 +98,8 @@ and lets them naturally wrap to a new line when they run out of space.
   margin-block-start: var(--flow-space, 1em);
 }
 
-.l-flow-em-0-5 > * + * {
-  margin-block-start: 0.5em;
-}
-
-.l-flow-em-1 > * + * {
-  margin-block-start: 1em;
-}
-
-.l-flow-em-1-5 > * + * {
-  margin-block-start: 1.5em;
-}
-
-.l-flow-em-2 > * + * {
-  margin-block-start: 2em;
-}
-
-.l-flow-em-2-5 > * + * {
-  margin-block-start: 2.5em;
-}
-
-.l-flow-fluid-2xl > * + * {
-  margin-block-start: var(--space-2xl);
-}
-
 /* ==========================================================================
-                            FLEXBOX LAYOUTS
-   Micro/Macro layouts using Flexbox with configurable custom properties.
+                            FLEXBOX 
    ========================================================================== */
 
 .l-flex {
@@ -73,25 +110,88 @@ and lets them naturally wrap to a new line when they run out of space.
 }
 
 /* ==========================
-            THE CENTER 
+            THE SWITCHER 
    ========================== */
 
 /* 
-Controls horizontal constraints.
-It restricts the maximum width of content for readability 
-and perfectly centers it within the available space,
-often with built-in padding on the sides for smaller screens.
-*/
-.l-center {
-  box-sizing: content-box; /* So padding doesn't shrink the 60ch */
-  max-inline-size: var(--measure, 60ch);
-  padding-inline: var(--center-padding, 0);
-  margin-inline: auto;
+The Switcher is a layout that flips directly between an all-horizontal row
+and an all-vertical column. It does not allow awkward in-between stages.
+ */
+
+.l-switcher {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--switcher-gap, var(--space-m));
+  align-items: var(--switcher-vertical-alignment, flex-start);
+
+  & > * {
+    flex-grow: 1;
+    flex-basis: calc((var(--switcher-threshold, 30rem) - 100%) * 999);
+  }
+
+  /* MODIFIER: Strict Equal Widths */
+  &[data-switcher-equal-widths] > * {
+    min-inline-size: 0;
+  }
+
+  /* MODIFIER: Strict Equal Heights */
+  &[data-switcher-equal-heights] {
+    --switcher-vertical-alignment: stretch;
+  }
+
+  /* MODIFIER: Limit items (Wraps if it exceeds the limit) */
+  &[data-switcher-limit="3"] > :nth-last-child(n + 4),
+  &[data-switcher-limit="3"] > :nth-last-child(n + 4) ~ * {
+    flex-basis: 100%;
+  }
 }
 
-/* The intrinsic modifier (Great for centering a single button or image!) */
-.l-center--intrinsic {
+/* ==========================
+            THE SIDEBAR 
+   ========================== */
+
+/* 
+The Sidebar layout puts a narrow thing next to a wide thing,
+and automatically stacks them when space runs out.
+ */
+
+.l-sidebar {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--sidebar-gap, var(--space-m));
+  align-items: var(--sidebar-vertical-alignment, stretch);
+
+  /* FIXED SIDE: first child by default, last child if fixed-side="second" */
+  :where(
+    &:not([data-sidebar-fixed-side="second"]) > :first-child,
+    &[data-sidebar-fixed-side="second"] > :last-child
+  ) {
+    flex-grow: 1;
+    flex-basis: var(--sidebar-width, auto);
+  }
+
+  /* FLUID SIDE */
+  :where(
+    &:not([data-sidebar-fixed-side="second"]) > :last-child,
+    &[data-sidebar-fixed-side="second"] > :first-child
+  ) {
+    flex-grow: 999;
+    flex-basis: var(--sidebar-fluid-basis, 0);
+    min-inline-size: var(--sidebar-wrap-at, 50%);
+  }
+
+  /* MODIFIERS */
+  &[data-sidebar-type="image-text"] {
+    --sidebar-gap: var(--space-l-xl);
+
+    /* Image: Ideal size 50%, stops shrinking at 420px */
+    --sidebar-width: max(420px, 50%);
+
+    /* Content: Wraps when it has less than 300px of space */
+    --sidebar-wrap-at: 300px;
+  }
+
+  &[data-sidebar-align="center"] {
+    --sidebar-vertical-alignment: center;
+  }
 }

@@ -1,78 +1,118 @@
 /* =================================
              Typography
    ================================= */
-
-.u-text-300 {
-  /* 14px */
-  font-size: var(--fs-300);
+.u-font-size-s {
+  font-size: var(--font-size-s);
 }
 
-.u-text-400 {
-  /* 16px */
-  font-size: var(--fs-400);
+.u-font-size-base {
+  font-size: var(--font-size-base);
 }
 
-.u-text-500 {
-  /* 18 → 20 */
-  font-size: var(--fs-500);
+.u-font-size-m {
+  font-size: var(--font-size-m);
 }
 
-.u-text-600 {
-  /* 20 → 24 */
-  font-size: var(--fs-600);
+.u-font-size-l {
+  font-size: var(--font-size-l);
 }
 
-.u-text-700 {
-  /* 24 → 32 */
-  font-size: var(--fs-700);
+.u-font-size-heading-s {
+  font-size: var(--font-size-heading-s);
 }
 
-.u-text-800 {
-  /* 36 → 48 */
-  font-size: var(--fs-800);
+.u-font-size-heading-m {
+  font-size: var(--font-size-heading-m);
 }
 
-.u-text-900 {
-  /* 60 → 80 */
-  font-size: var(--fs-900);
+.u-font-size-heading-l {
+  font-size: var(--font-size-heading-l);
 }
 
-.u-text-1000 {
-  /* 60 → 120 */
-  font-size: var(--fs-1000);
+.u-font-size-heading-xl {
+  font-size: var(--font-size-heading-xl);
 }
 
 .u-text-center {
   text-align: center;
 }
 
+.u-section-text {
+  font-size: var(--font-size-l);
+}
+
 /* =================================
           Colors & Backgrounds
    ================================= */
 
-.u-text-brand-500 {
-  color: var(--clr-brand-500);
+.u-text-brand {
+  color: var(--color-text-brand);
+}
+
+.u-bg-accent-strong {
+  background-color: var(--color-surface-accent-strong);
+}
+
+.u-bg-low {
+  background-color: var(--color-surface-low);
+}
+
+.u-bg-lowest {
+  background-color: var(--color-surface-lowest);
+}
+
+.u-bg-base {
+  background-color: var(--color-surface-base);
+}
+
+.u-section-title {
+  font-size: var(--font-size-heading-m);
+
+  & > span {
+    color: var(--color-text-brand);
+  }
 }
 
 /* =================================
-            Padding & Margin
+            Border Radius
    ================================= */
-
-.u-vertical-padding {
-  padding-block: var(--v-padding-start, var(--v-padding, var(--space-2xl-3xl)))
-    var(--v-padding-end, var(--v-padding, var(--space-2xl-3xl)));
+.u-radius-s {
+  border-radius: var(--border-radius-s);
 }
 
-/* mx = margin on the x-axis */
-.u-mx-auto {
-  margin-inline: auto;
+.u-radius-m {
+  border-radius: var(--border-radius-m);
+}
+
+.u-radius-l {
+  border-radius: var(--border-radius-l);
 }
 
 /* =================================
              Layout & Alignment
    ================================= */
 
-.u-max-width {
-  width: 100%;
-  max-width: var(--max-w, 45rem);
+.u-justify-items-center {
+  justify-items: center;
+}
+
+.u-align-items-center {
+  align-items: center;
+}
+
+/* =================================
+               Misc 
+   ================================= */
+
+.u-visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  white-space: nowrap;
+  border: 0;
+  clip: rect(0, 0, 0, 0); /* stylelint-disable-line */
+  clip-path: inset(50%);
 }

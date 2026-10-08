@@ -1,4 +1,19 @@
 .hero {
-  color: var(--color-text-strong);
+  color: var(--clr-white);
+
+  /* color: var(--color-text-strong); */
   background: url("../../images/hero.webp") center center / cover no-repeat;
+}
+
+.hero__title {
+  font-size: var(--font-size-heading-l);
+  color: var(--clr-white);
+
+  span {
+    font-size: var(--font-size-heading-xl);
+  }
+}
+
+.hero__descriptions {
+  font-size: var(--font-size-m);
 }

@@ -20,7 +20,7 @@
  *                  Spaces
  *============================================= **/
 
-/* @link https://utopia.fyi/space/calculator?c=320,16,1.2,1330,16,1.333,7,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+/* https://utopia.fyi/space/calculator/?c=320,16,1.2,1330,16,1.333,7,2,&s=0.75|0.5|0.25,1.5|2|3|4|6|8,s-l|2xl-4xl&g=s,l,xl,12 */
 
 /* stylelint-disable-next-line no-duplicate-selectors */
 :root {
@@ -51,6 +51,9 @@
   /* Space 3xl: 96px static */
   --space-3xl: 6rem;
 
+  /* Space 4xl: 128px static */
+  --space-4xl: 8rem;
+
   /* One-up pairs */
 
   /* Space 3xs-2xs: 4px → 8px */
@@ -77,8 +80,14 @@
   /* Space 2xl-3xl: 64px → 96px */
   --space-2xl-3xl: clamp(4rem, 3.3663rem + 3.1683vw, 6rem);
 
+  /* Space 3xl-4xl: 96px → 128px */
+  --space-3xl-4xl: clamp(6rem, 5.3663rem + 3.1683vw, 8rem);
+
   /* Custom pairs */
 
   /* Space s-l: 16px → 32px */
   --space-s-l: clamp(1rem, 0.6832rem + 1.5842vw, 2rem);
+
+  /* Space 2xl-4xl: 64px → 128px */
+  --space-2xl-4xl: clamp(4rem, 2.7327rem + 6.3366vw, 8rem);
 }

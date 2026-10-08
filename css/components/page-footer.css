@@ -1,0 +1,12 @@
+.page-footer {
+  --flow-space: 2em;
+}
+
+.page-footer__header {
+  font-size: var(--font-size-l);
+  font-weight: 700;
+}
+
+.page-footer__link {
+  display: inline-block;
+}

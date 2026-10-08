@@ -1,0 +1,13 @@
+.btn {
+  display: inline-block;
+  padding: 0.3em 0.6em;
+  font-weight: 700;
+  background-color: var(--clr-green-500);
+  border-radius: var(--border-radius-s);
+}
+
+.btn:hover,
+.btn:focus-visible {
+  color: var(--color-text-strong);
+  background-color: var(--clr-green-400);
+}
