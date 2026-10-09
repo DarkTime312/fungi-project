@@ -37,10 +37,6 @@
   text-align: center;
 }
 
-.u-section-text {
-  font-size: var(--font-size-l);
-}
-
 /* =================================
           Colors & Backgrounds
    ================================= */
@@ -65,18 +61,14 @@
   background-color: var(--color-surface-base);
 }
 
-.u-section-title {
-  font-size: var(--font-size-heading-m);
-
-  & > span {
-    color: var(--color-text-brand);
-  }
-}
-
 /* =================================
             Border Radius
    ================================= */
-.u-radius-s {
+
+/** ------------------------------------------------------------------------
+   *todo                         REMOVE IF NOT USED
+   *------------------------------------------------------------------------ **/
+/* .u-radius-s {
   border-radius: var(--border-radius-s);
 }
 
@@ -86,7 +78,7 @@
 
 .u-radius-l {
   border-radius: var(--border-radius-l);
-}
+} */
 
 /* =================================
              Layout & Alignment

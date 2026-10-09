@@ -52,7 +52,7 @@
   }
 }
 
-.primary-nav--active {
+.primary-nav[data-state="expanded"] {
   visibility: visible;
   opacity: 1;
 

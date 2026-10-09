@@ -3,37 +3,42 @@
 // =========================
 const hamburgerBtn = document.getElementById("hamburgerBtn");
 const primaryNav = document.getElementById("primaryNav");
+const hamburgerLinks = document.querySelectorAll(".primary-nav__link");
+
+const isMenuOpen = () => primaryNav.getAttribute("data-state") === "expanded";
+
 
 function toggleHamburgerMenu() {
-    // Toggle the active class and capture the boolean result
-    const hamburgerIsOpen = primaryNav.classList.toggle("primary-nav--active");
+    // If it's open, we want to close it (false). If closed, we want to open it (true).
+    const willOpen = !isMenuOpen(); 
 
-    // Accessibility: tell screen readers if the menu is expanded
-    hamburgerBtn.setAttribute("aria-expanded", hamburgerIsOpen);
-    hamburgerBtn.setAttribute(
-    "aria-label",
-    hamburgerIsOpen ? "Close navbar menu" : "Open navbar menu"
-  )
+    // 1. Update the CSS state using a clean ternary operator
+    willOpen 
+        ? primaryNav.setAttribute("data-state", "expanded")
+        : primaryNav.removeAttribute("data-state");
+
+
+    // 2. Update Accessibility attributes
+    hamburgerBtn.setAttribute("aria-expanded", willOpen);
+    hamburgerBtn.setAttribute("aria-label", willOpen ? "Close navbar menu" : "Open navbar menu");
 
 }
 
 hamburgerBtn.addEventListener("click", toggleHamburgerMenu)
 
 document.addEventListener('keydown', (e) => {
-    if (e.key === "Escape" && primaryNav.classList.contains("primary-nav--active")) {
+    if (e.key === "Escape" && isMenuOpen()) {
         toggleHamburgerMenu();
+        hamburgerBtn.focus(); // Return focus to button for keyboard users
     }
 });
 
+
 // Close the menu on link click
-
-const hamburgerLinks = document.querySelectorAll(".primary-nav__link");
-
 hamburgerLinks.forEach(link => {
     link.addEventListener("click", () => {
-        if (primaryNav.classList.contains("primary-nav--active")) {
-            toggleHamburgerMenu();
-        }
+        if (isMenuOpen()) toggleHamburgerMenu();
     });
 });
+
 

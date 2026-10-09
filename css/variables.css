@@ -1,4 +1,6 @@
 :root {
+  color-scheme: dark; /* dark theme is default */
+
   /* ========================================================================
      PRIMITIVES
      Fluid font sizes (--fs-*) and spacing (--space-*) are also primitives,

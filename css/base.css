@@ -31,3 +31,7 @@ button {
   background-color: transparent;
   border: none;
 }
+
+img {
+  border-radius: var(--border-radius-l);
+}
