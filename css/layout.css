@@ -116,6 +116,9 @@ and lets them naturally wrap to a new line when they run out of space.
                             FLEXBOX 
    ========================================================================== */
 
+/** ======================
+    *todo    REMOVE IF TOO GENERIC
+    *======================== **/
 .l-flex {
   display: flex;
   flex-flow: var(--flex-direction, row) var(--flex-wrap, nowrap);
@@ -136,7 +139,7 @@ and an all-vertical column. It does not allow awkward in-between stages.
   display: flex;
   flex-wrap: wrap;
   gap: var(--switcher-gap, var(--space-m));
-  align-items: var(--switcher-vertical-alignment, flex-start);
+  align-items: var(--switcher-vertical-alignment, stretch);
 
   & > * {
     flex-grow: 1;
@@ -146,11 +149,6 @@ and an all-vertical column. It does not allow awkward in-between stages.
   /* MODIFIER: Strict Equal Widths */
   &[data-switcher-equal-widths] > * {
     min-inline-size: 0;
-  }
-
-  /* MODIFIER: Strict Equal Heights */
-  &[data-switcher-equal-heights] {
-    --switcher-vertical-alignment: stretch;
   }
 
   /* MODIFIER: Limit items (Wraps if it exceeds the limit) */

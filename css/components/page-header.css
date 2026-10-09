@@ -35,10 +35,11 @@
 }
 
 .primary-nav__list {
-  --flex-col-gap: var(--space-m);
+  display: flex;
+  gap: var(--space-m);
 
   @media screen and (width < 760px) {
-    --flex-direction: column;
+    flex-direction: column;
   }
 }
 

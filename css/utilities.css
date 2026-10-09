@@ -66,8 +66,9 @@
    ================================= */
 
 /** ------------------------------------------------------------------------
-   *todo                         REMOVE IF NOT USED
+   *todo              REMOVE IF NOT USED
    *------------------------------------------------------------------------ **/
+
 /* .u-radius-s {
   border-radius: var(--border-radius-s);
 }
@@ -79,18 +80,6 @@
 .u-radius-l {
   border-radius: var(--border-radius-l);
 } */
-
-/* =================================
-             Layout & Alignment
-   ================================= */
-
-.u-justify-items-center {
-  justify-items: center;
-}
-
-.u-align-items-center {
-  align-items: center;
-}
 
 /* =================================
                Misc 
