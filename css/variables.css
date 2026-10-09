@@ -42,24 +42,6 @@
                                 SEMANTIC TOKENS
      ======================================================================== */
 
-  /* ---------- Color: Text ---------- */
-  --color-text-base: var(--clr-gray-100);
-  --color-text-strong: var(--clr-white);
-  --color-text-brand: var(--clr-brand-500);
-  --color-text-brand-hover: var(--clr-brand-400);
-
-  /* ---------- Color: Surfaces ---------- */
-  --color-surface-highest: var(--clr-brown-500);
-  --color-surface-high: var(--clr-brown-600);
-  --color-surface-base: var(--clr-brown-700);
-  --color-surface-low: var(--clr-brown-800);
-  --color-surface-lowest: var(--clr-brown-900);
-
-  /* ---------- Color: Accent surfaces ---------- */
-  --color-surface-accent-subtle: var(--clr-green-400);
-  --color-surface-accent-base: var(--clr-green-500);
-  --color-surface-accent-strong: var(--clr-green-600);
-
   /* ---------- Typography: Font sizes (from utopia.css) ---------- */
   --font-size-s: var(--fs-300);
   --font-size-base: var(--fs-400);
@@ -78,32 +60,42 @@
   --border-radius-s: 0.25rem;
   --border-radius-m: 0.5rem;
   --border-radius-l: 0.75rem;
-}
 
-@supports (color: light-dark(#000, #fff)) {
-  :root {
-    --color-text-base: light-dark(var(--clr-brown-800), var(--clr-gray-100));
-    --color-text-strong: light-dark(var(--clr-brown-900), var(--clr-white));
-    --color-surface-low: light-dark(var(--clr-brown-300), var(--clr-brown-800));
-    --color-surface-lowest: light-dark(
-      var(--clr-brown-400),
-      var(--clr-brown-900)
-    );
-    --color-surface-base: light-dark(
-      var(--clr-brown-200),
-      var(--clr-brown-700)
-    );
-    --color-surface-high: light-dark(
-      var(--clr-brown-100),
-      var(--clr-brown-600)
-    );
-    --color-surface-accent-subtle: light-dark(
-      var(--clr-green-600),
-      var(--clr-green-400)
-    );
-    --color-surface-accent-strong: light-dark(
-      var(--clr-green-400),
-      var(--clr-green-600)
-    );
+  /* ---------- Color: Text ---------- */
+  --color-text-base: var(--clr-gray-100);
+  --color-text-strong: var(--clr-white);
+  --color-text-brand: var(--clr-brand-500);
+  --color-text-brand-hover: var(--clr-brand-400);
+
+  /* ---------- Color: Surfaces ---------- */
+  --color-surface-highest: var(--clr-brown-500);
+  --color-surface-high: var(--clr-brown-600);
+  --color-surface-base: var(--clr-brown-700);
+  --color-surface-low: var(--clr-brown-800);
+  --color-surface-lowest: var(--clr-brown-900);
+
+  /* ---------- Color: Accent surfaces ---------- */
+  --color-surface-accent-subtle: var(--clr-green-400);
+  --color-surface-accent-base: var(--clr-green-500);
+  --color-surface-accent-strong: var(--clr-green-600);
+
+  /* ---------- LIGHT THEME OVERRIDES ---------- */
+  @media (prefers-color-scheme: light) {
+    color-scheme: light;
+
+    /* Text */
+    --color-text-base: var(--clr-brown-800);
+    --color-text-strong: var(--clr-brown-900);
+
+    /* Surfaces */
+    --color-surface-highest: var(--clr-white);
+    --color-surface-high: var(--clr-brown-100);
+    --color-surface-base: var(--clr-brown-200);
+    --color-surface-low: var(--clr-brown-300);
+    --color-surface-lowest: var(--clr-brown-400);
+
+    /* Accents */
+    --color-surface-accent-subtle: var(--clr-green-600);
+    --color-surface-accent-strong: var(--clr-green-400);
   }
 }
