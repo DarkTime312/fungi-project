@@ -3,21 +3,56 @@
    Handles spacing between sibling elements (The "Lobotomized Owl" technique).
    ========================================================================== */
 .l-flow {
-  /* Default Flow (1em) */
-  & > * + * {
-    margin-block-start: var(--flow-space, 1em);
+  /* 1. Define Defaults */
+  & > * {
+    --flow-multiplier: 1; /* Default size (Medium) */
+    --flow-unit: 1em; /* Typographic (relative) by default */
   }
 
-  /* NOTE: We target `> * + *` directly to prevent modified spacing from 
-      leaking into nested .l-flow containers. */
+  /* MODIFIER: Boolean Flag
+     Switches spacing from relative (em) to consistent (rem) */
+  &[data-flow-consistent] > * {
+    --flow-unit: 1rem;
+  }
 
-  /* MODIFIER: Recursive (Targets ALL descendants, not just direct children) 
-     WARNING: Applies top margin to ALL nested siblings, which can accidentally
-             break alignment in horizontal flex containers. 
-  */
+  /* MODIFIERS: T-Shirt Sizes
+     Changes the multiplier applied to the base unit
+      */
+  &[data-flow-space="xs"] > * {
+    --flow-multiplier: 0.5;
+  }
 
+  &[data-flow-space="s"] > * {
+    --flow-multiplier: 0.75;
+  }
+
+  /* "m" is the default (1), so we don't strictly need it */
+  &[data-flow-space="m"] > * {
+    --flow-multiplier: 1;
+  }
+
+  &[data-flow-space="l"] > * {
+    --flow-multiplier: 1.5;
+  }
+
+  &[data-flow-space="xl"] > * {
+    --flow-multiplier: 2;
+  }
+
+  &[data-flow-space="2xl"] > * {
+    --flow-multiplier: 2.5;
+  }
+
+  /* EXECUTION: Apply the margin
+     WARNING: data-flow-recursive targets ALL descendants.
+        Use with caution as it can easily break complex nested components.
+      */
+  &:not([data-flow-recursive]) > * + *,
   &[data-flow-recursive] * + * {
-    margin-block-start: var(--flow-space, 1em);
+    margin-block-start: var(
+      --flow-space,
+      calc(var(--flow-multiplier) * var(--flow-unit))
+    );
   }
 }
 
