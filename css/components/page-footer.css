@@ -1,8 +1,10 @@
 .page-footer {
-  --flow-space: 2em;
+  text-align: center;
+  background-color: var(--color-surface-low);
 }
 
 .page-footer__header {
+  font-family: var(--font-family-heading);
   font-size: var(--font-size-l);
   font-weight: 700;
 }

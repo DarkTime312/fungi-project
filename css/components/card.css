@@ -1,4 +1,6 @@
 .card {
+  display: grid;
+  gap: var(--card-gap, 1rem);
   padding: var(--space-s);
   background-color: var(--color-surface-high);
   border-radius: var(--border-radius-l);
@@ -9,6 +11,15 @@
 }
 
 .card__title {
-  font-size: var(--font-size-heading-s);
-  color: light-dark(var(--clr-brand-500), var(--clr-white));
+  font-size: var(--card-title-font-size, var(--font-size-heading-s));
+  color: var(--card-title-color, var(--color-text-brand));
 }
+
+/* .mushroom-guide {
+  --card-title-font-size: var(--font-size-l);
+  --card-title-color: var(--color-text-strong);
+}
+
+.faq-bento-grid {
+  --card-title-color: var(--color-text-strong);
+} */

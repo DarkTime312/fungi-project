@@ -1,13 +1,14 @@
 .btn {
-  display: inline-block;
+  display: inline-flex;
   padding: 0.3em 0.6em;
+  font-family: var(--font-family-heading);
   font-weight: 700;
-  background-color: var(--clr-green-500);
+  background-color: var(--btn-bg, var(--color-surface-accent-base));
   border-radius: var(--border-radius-s);
 }
 
 .btn:hover,
 .btn:focus-visible {
   color: var(--color-text-strong);
-  background-color: var(--clr-green-400);
+  background-color: var(--color-surface-accent-strong);
 }
