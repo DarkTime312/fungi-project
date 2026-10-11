@@ -242,3 +242,58 @@ and automatically stacks them when space runs out.
     --sidebar-vertical-alignment: center;
   }
 }
+
+/* ==========================
+            THE FRAME 
+   ========================== */
+
+/* 
+The Frame is a layout designed to force an element to maintain
+a very specific, consistent shape (its aspect ratio), regardless of
+what you put inside it. Think of it like a literal, physical picture frame
+hanging on a wall.
+
+The Frame allows you to stop worrying about what size images you are downloading. 
+Your CSS takes absolute control over how they are framed in the layout!
+*/
+
+/* 1. The Frame Container */
+.l-frame {
+  /* Flexbox centers the image or any text inside */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* You can use variables to pass custom shapes in your HTML, falling back to 16:9 */
+  aspect-ratio: var(--frame-ratio, 16 / 9);
+  overflow: hidden; /* Hide the cropped bits */
+
+  /* 2. The Media inside the Frame */
+  & > img,
+  & > video {
+    inline-size: 100%; /* Width 100% */
+    block-size: 100%; /* Height 100% */
+
+    /* The magic property that crops instead of squishing! */
+    object-fit: cover;
+  }
+
+  /* MODIFIERS */
+  &[data-frame-ratio="4:3"],
+  &[data-frame-ratio="landscape"] {
+    --frame-ratio: 4 / 3;
+  }
+
+  &[data-frame-ratio="1:1"],
+  &[data-frame-ratio="square"] {
+    --frame-ratio: 1 / 1;
+  }
+
+  &[data-frame-ratio="3:2"] {
+    --frame-ratio: 3 / 2;
+  }
+
+  &[data-frame-ratio="portrait"] {
+    --frame-ratio: 3 / 4;
+  }
+}

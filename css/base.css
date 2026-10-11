@@ -35,6 +35,7 @@ button {
   border: none;
 }
 
-img {
+/* Only apply border radius to non-svg images */
+img:not([src$=".svg"]) {
   border-radius: var(--border-radius-l);
 }

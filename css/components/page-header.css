@@ -2,8 +2,12 @@
   position: relative;
 }
 
-.page-header__hamburger {
-  z-index: 1;
+/* Hamburger Button */
+[aria-controls="primaryNav"] {
+  z-index: 10;
+  padding: 0.5rem;
+  background-color: var(--clr-brown-800);
+  border-radius: var(--border-radius-s);
 
   @media screen and (width >= 760px) {
     display: none;
@@ -40,6 +44,7 @@
 
   @media screen and (width < 760px) {
     flex-direction: column;
+    gap: 0;
   }
 }
 
@@ -53,7 +58,7 @@
   }
 }
 
-.primary-nav[data-state="expanded"] {
+[aria-expanded="true"] + .primary-nav {
   visibility: visible;
   opacity: 1;
 
