@@ -32,9 +32,9 @@
   --clr-green-600: hsl(145deg 29% 19%);
 
   /* ------ Color: Supporting ------ */
-  --clr-red-500: hsl(359deg 34% 24%);
-  --clr-orange-500: hsl(28deg 43% 28%);
-  --clr-teal-500: hsl(186deg 42% 25%);
+  --clr-red-500: hsl(359deg 34% 37%);
+  --clr-orange-500: hsl(28deg 43% 37%);
+  --clr-teal-500: hsl(186deg 42% 37%);
 
   /* ---------- Typography: Font families ---------- */
   --ff-fira-sans: "Fira Sans", sans-serif;

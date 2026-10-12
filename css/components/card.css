@@ -15,10 +15,29 @@
   color: var(--card-title-color, var(--color-text-brand));
 }
 
-/* .mushroom-guide {
-  --card-title-font-size: var(--font-size-l);
-  --card-title-color: var(--color-text-strong);
+.card__tags {
+  --cluster-gap: var(--space-xs);
 }
+
+.card__tag {
+  padding: 0.1em 0.4em;
+  font-family: var(--font-family-heading);
+  font-size: var(--font-size-s);
+  color: var(--clr-white);
+  background-color: var(
+    --card-tag-background-color,
+    var(--color-surface-accent-base)
+  );
+  border-radius: var(--border-radius-s);
+}
+
+.card__notes {
+  padding: 1rem;
+  background-color: var(--color-surface-highest);
+  border-radius: var(--border-radius-m);
+}
+
+/* 
 
 .faq-bento-grid {
   --card-title-color: var(--color-text-strong);

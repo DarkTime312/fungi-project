@@ -1,0 +1,59 @@
+.section-guide {
+  --card-title-font-size: var(--font-size-l);
+  --card-title-color: var(--clr-white);
+  --grid-gap: 1rem;
+
+  @media (prefers-color-scheme: light) {
+    --card-title-color: var(--color-text-brand);
+  }
+
+  select {
+    padding: 0.5rem 1rem;
+    font-family: var(--font-family-heading);
+    color: var(--color-text-strong);
+    background-color: var(--color-surface-accent-base);
+    border-radius: var(--border-radius-m);
+
+    option:checked {
+      color: #fff;
+      background: var(--clr-teal-500);
+    }
+  }
+}
+
+.section-guide__grid {
+  .card {
+    grid-template-rows: subgrid;
+    grid-row: span 4;
+  }
+
+  .card__tag[data-type="toxic"] {
+    --card-tag-background-color: var(--clr-red-500);
+  }
+
+  .card__tag[data-season="fall"] {
+    --card-tag-background-color: var(--clr-orange-500);
+  }
+
+  .card__tag[data-season="spring"] {
+    --card-tag-background-color: var(--clr-teal-500);
+  }
+}
+
+/* Control how slow and smooth the cards rearrange */
+::view-transition-group(*) {
+  animation-duration: 0.5s;
+  animation-timing-function: cubic-bezier(
+    0.2,
+    0,
+    0,
+    1
+  ); /* smooth deceleration */
+}
+
+/* Respect users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-group(*) {
+    animation-duration: 0.01s;
+  }
+}

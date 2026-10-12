@@ -13,4 +13,5 @@
 @import url("components/card.css") layer(components);
 @import url("components/btn.css") layer(components);
 @import url("components/page-footer.css") layer(components);
+@import url("components/section-guide.css") layer(components);
 @import url("utilities.css") layer(utilities);

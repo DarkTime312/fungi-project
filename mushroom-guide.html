@@ -89,6 +89,231 @@
           </div>
         </div>
       </section>
+
+      <section
+        class="[ l-region ] [ u-font-size-l u-bg-accent-strong ]"
+        data-region-space="spacious"
+      >
+        <div
+          class="[ l-wrapper l-sidebar ]"
+          data-sidebar-type="image-text"
+          data-sidebar-align="center"
+        >
+          <div class="[ l-frame ]" data-frame-ratio="square">
+            <img src="images/where-to-look.webp" alt="" />
+          </div>
+
+          <div class="[ l-flow ]">
+            <h2 class="[ u-font-size-heading-m ]">Where to look</h2>
+            <p>Different species grow in different types of environments.</p>
+            <p>
+              Forests are always a good starting place, though, with a wide
+              range of species that grow in them.
+            </p>
+            <p>
+              If you’re after something specific, you can use our reference
+              guide below to help you out.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-guide [ l-region ]" data-region-space="spacious">
+        <div
+          class="[ l-wrapper l-flow ]"
+          data-flow-space="xl"
+          data-flow-consistent
+        >
+          <h2 class="[ u-font-size-heading-m ]">Get to know your mushrooms</h2>
+          <div class="[ l-cluster ]">
+            <label for="seasons" class="[ u-visually-hidden ]"
+              >Select a season:</label
+            >
+            <select name="seasons" id="seasons">
+              <option value="all">Season: All</option>
+              <option value="spring">Spring</option>
+              <option value="summer">Summer</option>
+              <option value="fall">Fall</option>
+            </select>
+
+            <label for="mushroom-types" class="[ u-visually-hidden ]"
+              >Select a mushroom type:</label
+            >
+            <select name="mushroom-types" id="mushroom-types">
+              <option value="all">Type: All</option>
+              <option value="edible">Edible</option>
+              <option value="toxic">Toxic</option>
+            </select>
+          </div>
+
+          <ul class="section-guide__grid [ l-auto-grid ]" role="list">
+            <li class="card">
+              <h3 class="card__title">Chanterelle</h3>
+              <ul class="card__tags [ l-cluster ]" role="list">
+                <li class="card__tag" data-type="edible">edible</li>
+                <li class="card__tag" data-season="summer">summer</li>
+              </ul>
+              <p>Golden-yellow, funnel-shaped mushroom with false gills</p>
+              <div class="card__notes">
+                <p>
+                  <strong>Important notes:</strong> Has toxic look-alikes -
+                  learn proper identification
+                </p>
+              </div>
+            </li>
+            <li class="card">
+              <h3 class="card__title">Morel</h3>
+              <ul class="card__tags [ l-cluster ]" role="list">
+                <li class="card__tag" data-type="toxic">toxic</li>
+                <li class="card__tag" data-season="spring">spring</li>
+              </ul>
+              <p>Distinctive honeycomb-like cap structure</p>
+              <div class="card__notes">
+                <p>
+                  <strong>Important notes:</strong> Must be cooked before eating
+                </p>
+              </div>
+            </li>
+            <li class="card">
+              <h3 class="card__title">Chicken of the Woods</h3>
+              <ul class="card__tags [ l-cluster ]" role="list">
+                <li class="card__tag" data-type="edible">edible</li>
+                <li class="card__tag" data-season="summer">summer</li>
+              </ul>
+              <p>Bright orange bracket fungus with yellow edges</p>
+              <div class="card__notes">
+                <p>
+                  <strong>Important notes:</strong> Avoid if growing on certain
+                  tree species
+                </p>
+              </div>
+            </li>
+            <li class="card">
+              <h3 class="card__title">Death Cap</h3>
+              <ul class="card__tags [ l-cluster ]" role="list">
+                <li class="card__tag" data-type="toxic">toxic</li>
+                <li class="card__tag" data-season="summer">summer</li>
+              </ul>
+              <p>Pale green to white cap with white gills</p>
+              <div class="card__notes">
+                <p>
+                  <strong>Important notes:</strong> Extremely toxic - study for
+                  safety awareness
+                </p>
+              </div>
+            </li>
+            <li class="card">
+              <h3 class="card__title">Oyster Mushroom</h3>
+              <ul class="card__tags [ l-cluster ]" role="list">
+                <li class="card__tag" data-type="edible">edible</li>
+                <li class="card__tag" data-season="fall">fall</li>
+              </ul>
+              <p>Fan-shaped caps growing in clusters</p>
+              <div class="card__notes">
+                <p>
+                  <strong>Important notes:</strong> Great beginner mushroom, few
+                  look-alikes
+                </p>
+              </div>
+            </li>
+            <li class="card">
+              <h3 class="card__title">Lion’s Mane</h3>
+              <ul class="card__tags [ l-cluster ]" role="list">
+                <li class="card__tag" data-type="edible">edible</li>
+                <li class="card__tag" data-season="fall">fall</li>
+              </ul>
+              <p>White, shaggy appearance like a lion's mane</p>
+              <div class="card__notes">
+                <p><strong>Important notes:</strong> No toxic look-alikes</p>
+              </div>
+            </li>
+            <li class="card">
+              <h3 class="card__title">Destroying Angel</h3>
+              <ul class="card__tags [ l-cluster ]" role="list">
+                <li class="card__tag" data-type="toxic">toxic</li>
+                <li class="card__tag" data-season="summer">summer</li>
+              </ul>
+              <p>Pure white mushroom with a sack-like base</p>
+              <div class="card__notes">
+                <p>
+                  <strong>Important notes:</strong> Deadly toxic - study for
+                  safety awareness
+                </p>
+              </div>
+            </li>
+            <li class="card">
+              <h3 class="card__title">King Bolete</h3>
+              <ul class="card__tags [ l-cluster ]" role="list">
+                <li class="card__tag" data-type="edible">edible</li>
+                <li class="card__tag" data-season="summer">summer</li>
+              </ul>
+              <p>Large brown cap with thick stem</p>
+              <div class="card__notes">
+                <p>
+                  <strong>Important notes:</strong> Learn to distinguish from
+                  similar species
+                </p>
+              </div>
+            </li>
+            <li class="card">
+              <h3 class="card__title">Shaggy Mane</h3>
+              <ul class="card__tags [ l-cluster ]" role="list">
+                <li class="card__tag" data-type="edible">edible</li>
+                <li class="card__tag" data-season="fall">fall</li>
+              </ul>
+              <p>Golden-yellow, funnel-shaped mushroom with false gills</p>
+              <div class="card__notes">
+                <p>
+                  <strong>Important notes:</strong> Must be harvested and eaten
+                  quickly
+                </p>
+              </div>
+            </li>
+            <li class="card">
+              <h3 class="card__title">Maitake</h3>
+              <ul class="card__tags [ l-cluster ]" role="list">
+                <li class="card__tag" data-type="edible">edible</li>
+                <li class="card__tag" data-season="fall">fall</li>
+              </ul>
+              <p>Large, feathery clusters with overlapping gray-brown caps</p>
+              <div class="card__notes">
+                <p>
+                  <strong>Important notes:</strong> Also known as Hen of the
+                  Woods - no toxic look-alikes
+                </p>
+              </div>
+            </li>
+            <li class="card">
+              <h3 class="card__title">False Morel</h3>
+              <ul class="card__tags [ l-cluster ]" role="list">
+                <li class="card__tag" data-type="toxic">toxic</li>
+                <li class="card__tag" data-season="spring">spring</li>
+              </ul>
+              <p>Brain-like, reddish-brown cap with irregular shape</p>
+              <div class="card__notes">
+                <p>
+                  <strong>Important notes:</strong> Highly toxic - often
+                  confused with true morels
+                </p>
+              </div>
+            </li>
+            <li class="card">
+              <h3 class="card__title">Matsutake</h3>
+              <ul class="card__tags [ l-cluster ]" role="list">
+                <li class="card__tag" data-type="edible">edible</li>
+                <li class="card__tag" data-season="fall">fall</li>
+              </ul>
+              <p>White to brown cap with thick stem and distinct spicy aroma</p>
+              <div class="card__notes">
+                <p>
+                  <strong>Important notes:</strong> Verify identification - has
+                  toxic look-alikes
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
     </main>
 
     <footer class="page-footer [ l-region ]" data-region-space="compact">

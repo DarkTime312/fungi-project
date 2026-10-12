@@ -39,3 +39,8 @@ button {
 img:not([src$=".svg"]) {
   border-radius: var(--border-radius-l);
 }
+
+/* Ensure the native HTML hidden attribute always wins */
+[hidden] {
+  display: none !important;
+}
