@@ -10,35 +10,35 @@
 }
 
 /* Name the different parts of a card */
-.section-faq .card {
-  :nth-child(1) {
+:where(.section-faq .card) {
+  .card__frame {
     grid-area: image;
   }
 
-  :nth-child(2) {
+  .card__title {
     grid-area: title;
   }
 
-  :nth-child(3) {
+  p {
     grid-area: text;
   }
 }
 
 /* Name the cards */
 .card {
-  &#start-foraging {
+  :where(&[data-name="start-foraging"]) {
     grid-area: start-foraging;
   }
 
-  &#identify-mushrooms {
+  :where(&[data-name="identify-mushrooms"]) {
     grid-area: identify-mushrooms;
   }
 
-  &#where-to-find {
+  :where(&[data-name="where-to-find"]) {
     grid-area: where-to-find;
   }
 
-  &#best-seasons {
+  :where(&[data-name="best-seasons"]) {
     grid-area: best-seasons;
   }
 }
@@ -65,8 +65,8 @@
       "where-to-find    best-seasons";
     grid-template-columns: repeat(2, 1fr);
 
-    .card#identify-mushrooms,
-    .card#best-seasons {
+    .card[data-name="identify-mushrooms"],
+    .card[data-name="best-seasons"] {
       grid-template-areas:
         "title"
         "text"
@@ -80,7 +80,7 @@
       "where-to-find   where-to-find       best-seasons";
     grid-template-columns: repeat(3, 1fr);
 
-    .card#where-to-find {
+    .card[data-name="where-to-find"] {
       grid-template-areas:
         "image title"
         "image text";
@@ -91,7 +91,7 @@
       }
     }
 
-    .card#best-seasons {
+    .card[data-name="best-seasons"] {
       grid-template-rows: auto auto 1fr;
 
       .card__frame {
