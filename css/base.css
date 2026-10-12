@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: var(--font-family-body);
   font-size: var(--font-size-base);
@@ -43,4 +47,22 @@ img:not([src$=".svg"]) {
 /* Ensure the native HTML hidden attribute always wins */
 [hidden] {
   display: none !important;
+}
+
+/* Control how slow and smooth the cards rearrange */
+::view-transition-group(*) {
+  animation-duration: 0.5s;
+  animation-timing-function: cubic-bezier(
+    0.2,
+    0,
+    0,
+    1
+  ); /* smooth deceleration */
+}
+
+/* Respect users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-group(*) {
+    animation-duration: 0.01s;
+  }
 }

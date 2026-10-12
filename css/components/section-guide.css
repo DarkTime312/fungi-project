@@ -39,21 +39,3 @@
     --card-tag-background-color: var(--clr-teal-500);
   }
 }
-
-/* Control how slow and smooth the cards rearrange */
-::view-transition-group(*) {
-  animation-duration: 0.5s;
-  animation-timing-function: cubic-bezier(
-    0.2,
-    0,
-    0,
-    1
-  ); /* smooth deceleration */
-}
-
-/* Respect users who prefer reduced motion */
-@media (prefers-reduced-motion: reduce) {
-  ::view-transition-group(*) {
-    animation-duration: 0.01s;
-  }
-}
