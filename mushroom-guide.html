@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link
+      rel="preload"
+      as="image"
+      href="images/hero.webp"
+      fetchpriority="high"
+    />
+
+    <script src="js/script.js" defer></script>
+    <title>Fungi Finders</title>
+  </head>
+  <body>
+    <a href="#main-content" class="skip-link">Skip to content</a>
+
+    <header class="page-header [ l-region ]" data-region-space="tight">
+      <div
+        class="[ l-wrapper l-cluster ]"
+        data-wrapper-size="wide"
+        data-cluster-type="repel"
+      >
+        <a href="/" class="page-header__link" aria-label="Home Page">
+          <img
+            src="images/fungi-finders.svg"
+            alt="Fungi finders logo"
+            class="page-header__logo"
+          />
+        </a>
+
+        <button
+          aria-label="Menu"
+          aria-expanded="false"
+          aria-controls="primaryNav"
+        >
+          <img src="images/hamburger.svg" alt="" />
+        </button>
+
+        <nav
+          class="primary-nav"
+          id="primaryNav"
+          aria-label="Primary navigation"
+        >
+          <ul class="primary-nav__list" role="list">
+            <li class="primary-nav__item" style="--animation-order: 1">
+              <a href="#" class="primary-nav__link">Discover</a>
+            </li>
+            <li class="primary-nav__item" style="--animation-order: 2">
+              <a href="#" class="primary-nav__link">Mushroom guide</a>
+            </li>
+            <li class="primary-nav__item" style="--animation-order: 3">
+              <a href="#" class="primary-nav__link">FAQ</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <section class="hero [ l-region ]">
+        <div class="[ l-wrapper l-flow ]" data-flow-recursive>
+          <h1 class="hero__title">
+            Quick reference
+            <span>Mushroom Guide </span>
+          </h1>
+
+          <div class="hero__descriptions [ l-center ]">
+            <p>
+              Discover a wide array of mushrooms from around the world, each
+              with its own unique flavor profile and culinary uses.
+            </p>
+            <p>
+              Whether you're looking for earthy porcinis, delicate chanterelles,
+              or meaty shiitakes, our selection has something for every palate.
+            </p>
+            <p>
+              Explore the diverse shapes, sizes, and colors of these fungi to
+              elevate your dishes to new heights.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="page-footer [ l-region ]" data-region-space="compact">
+      <div
+        class="[ l-wrapper l-flow ]"
+        data-flow-space="xl"
+        data-flow-consistent
+      >
+        <p class="page-footer__header">Happy Foraging!</p>
+        <a href="mailto:contact@fungifinders.com" class="page-footer__link"
+          >contact@fungifinders.com</a
+        >
+      </div>
+    </footer>
+  </body>
+</html>
