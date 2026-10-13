@@ -1,0 +1,8 @@
+.dropdown-btn {
+  padding: 0.5rem 1rem;
+  font-family: var(--font-family-heading);
+  color: var(--color-text-strong);
+  background-color: var(--color-surface-accent-base);
+  border: none;
+  border-radius: var(--border-radius-m);
+}

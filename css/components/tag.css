@@ -1,0 +1,11 @@
+.tag {
+  padding: 0.1em 0.4em;
+  font-family: var(--font-family-heading);
+  font-size: var(--font-size-s);
+  color: var(--clr-white);
+  background-color: var(
+    --tag-background-color,
+    var(--color-surface-accent-base)
+  );
+  border-radius: var(--border-radius-s);
+}

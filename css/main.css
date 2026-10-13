@@ -9,10 +9,11 @@
 @import url("components/skip-link.css") layer(components);
 @import url("components/page-header.css") layer(components);
 @import url("components/hero.css") layer(components);
-@import url("components/section.css") layer(components);
 @import url("components/card.css") layer(components);
-@import url("components/btn.css") layer(components);
 @import url("components/page-footer.css") layer(components);
+@import url("components/btn.css") layer(components);
+@import url("components/dropdown-btn.css") layer(components);
 @import url("components/section-guide.css") layer(components);
 @import url("components/section-faq.css") layer(components);
+@import url("components/tag.css") layer(components);
 @import url("utilities.css") layer(utilities);

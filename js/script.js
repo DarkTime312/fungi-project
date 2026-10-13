@@ -40,7 +40,7 @@ hamburgerLinks.forEach(link => {
 
 const seasonFilter = document.querySelector("#seasons");
 const typeFilter = document.querySelector("#mushroom-types");
-const cards = document.querySelectorAll(".section-guide__grid .card");
+const cards = document.querySelectorAll(".section-guide .card");
 const placeholderText = document.querySelector(".section-guide__placeholder");
 
 // Only initialize filtering on pages that contain the filters.

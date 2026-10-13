@@ -1,41 +1,32 @@
 .section-guide {
   --card-title-font-size: var(--font-size-l);
   --card-title-color: var(--clr-white);
+  --card-gap: 0.75rem;
   --grid-gap: 1rem;
+  --grid-min-item-size: 17rem;
 
   @media (prefers-color-scheme: light) {
     --card-title-color: var(--color-text-brand);
   }
 
-  select {
-    padding: 0.5rem 1rem;
-    font-family: var(--font-family-heading);
-    color: var(--color-text-strong);
-    background-color: var(--color-surface-accent-base);
-    border-radius: var(--border-radius-m);
-
-    option:checked {
-      color: #fff;
-      background: var(--clr-teal-500);
-    }
-  }
-}
-
-.section-guide__grid {
   .card {
     grid-template-rows: subgrid;
     grid-row: span 4;
   }
 
-  .card__tag[data-type="toxic"] {
-    --card-tag-background-color: var(--clr-red-500);
+  .tags {
+    --cluster-gap: var(--space-xs);
   }
 
-  .card__tag[data-season="fall"] {
-    --card-tag-background-color: var(--clr-orange-500);
+  .tag[data-type="toxic"] {
+    --tag-background-color: var(--clr-red-500);
   }
 
-  .card__tag[data-season="spring"] {
-    --card-tag-background-color: var(--clr-teal-500);
+  .tag[data-season="fall"] {
+    --tag-background-color: var(--clr-orange-500);
+  }
+
+  .tag[data-season="spring"] {
+    --tag-background-color: var(--clr-teal-500);
   }
 }

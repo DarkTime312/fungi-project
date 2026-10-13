@@ -127,32 +127,48 @@
           <h2 class="[ u-font-size-heading-m ]">Get to know your mushrooms</h2>
           <div class="[ l-cluster ]">
             <label for="seasons" class="[ u-visually-hidden ]"
-              >Select a season:</label
+              >Filter mushrooms by season:</label
             >
-            <select name="seasons" id="seasons">
-              <option value="all">Season: All</option>
+            <select name="seasons" id="seasons" class="dropdown-btn">
+              <option selected value="all">Season: All</option>
               <option value="spring">Spring</option>
               <option value="summer">Summer</option>
               <option value="fall">Fall</option>
             </select>
 
             <label for="mushroom-types" class="[ u-visually-hidden ]"
-              >Select a mushroom type:</label
+              >Filter mushrooms by type:</label
             >
-            <select name="mushroom-types" id="mushroom-types">
-              <option value="all">Type: All</option>
+            <select
+              name="mushroom-types"
+              id="mushroom-types"
+              class="dropdown-btn"
+            >
+              <option selected value="all">Type: All</option>
               <option value="edible">Edible</option>
               <option value="toxic">Toxic</option>
             </select>
           </div>
-          <p class="section-guide__placeholder">No cards match these filters</p>
+          <p class="section-guide__placeholder" hidden>
+            No cards match these filters
+          </p>
 
-          <ul class="section-guide__grid [ l-auto-grid ]" role="list">
+          <ul class="[ l-auto-grid ]" role="list">
             <li class="card">
               <h3 class="card__title">Chanterelle</h3>
-              <ul class="card__tags [ l-cluster ]" role="list">
-                <li class="card__tag" data-type="edible">edible</li>
-                <li class="card__tag" data-season="summer">summer</li>
+              <ul
+                class="tags [ l-cluster ]"
+                role="list"
+                aria-label="Mushroom characteristics"
+              >
+                <li class="tag" data-type="edible">
+                  <span class="u-visually-hidden">This mushroom is</span> edible
+                </li>
+                <li class="tag" data-season="summer">
+                  <span class="u-visually-hidden">
+                    You can harvest this mushroom in the </span
+                  >summer
+                </li>
               </ul>
               <p>Golden-yellow, funnel-shaped mushroom with false gills</p>
               <div class="card__notes">
@@ -164,9 +180,19 @@
             </li>
             <li class="card">
               <h3 class="card__title">Morel</h3>
-              <ul class="card__tags [ l-cluster ]" role="list">
-                <li class="card__tag" data-type="toxic">toxic</li>
-                <li class="card__tag" data-season="spring">spring</li>
+              <ul
+                class="tags [ l-cluster ]"
+                role="list"
+                aria-label="Mushroom characteristics"
+              >
+                <li class="tag" data-type="toxic">
+                  <span class="u-visually-hidden">This mushroom is</span> toxic
+                </li>
+                <li class="tag" data-season="spring">
+                  <span class="u-visually-hidden">
+                    You can harvest this mushroom in the </span
+                  >spring
+                </li>
               </ul>
               <p>Distinctive honeycomb-like cap structure</p>
               <div class="card__notes">
@@ -177,9 +203,19 @@
             </li>
             <li class="card">
               <h3 class="card__title">Chicken of the Woods</h3>
-              <ul class="card__tags [ l-cluster ]" role="list">
-                <li class="card__tag" data-type="edible">edible</li>
-                <li class="card__tag" data-season="summer">summer</li>
+              <ul
+                class="tags [ l-cluster ]"
+                role="list"
+                aria-label="Mushroom characteristics"
+              >
+                <li class="tag" data-type="edible">
+                  <span class="u-visually-hidden">This mushroom is</span> edible
+                </li>
+                <li class="tag" data-season="summer">
+                  <span class="u-visually-hidden">
+                    You can harvest this mushroom in the </span
+                  >summer
+                </li>
               </ul>
               <p>Bright orange bracket fungus with yellow edges</p>
               <div class="card__notes">
@@ -191,9 +227,19 @@
             </li>
             <li class="card">
               <h3 class="card__title">Death Cap</h3>
-              <ul class="card__tags [ l-cluster ]" role="list">
-                <li class="card__tag" data-type="toxic">toxic</li>
-                <li class="card__tag" data-season="summer">summer</li>
+              <ul
+                class="tags [ l-cluster ]"
+                role="list"
+                aria-label="Mushroom characteristics"
+              >
+                <li class="tag" data-type="toxic">
+                  <span class="u-visually-hidden">This mushroom is</span> toxic
+                </li>
+                <li class="tag" data-season="summer">
+                  <span class="u-visually-hidden">
+                    You can harvest this mushroom in the </span
+                  >summer
+                </li>
               </ul>
               <p>Pale green to white cap with white gills</p>
               <div class="card__notes">
@@ -205,9 +251,19 @@
             </li>
             <li class="card">
               <h3 class="card__title">Oyster Mushroom</h3>
-              <ul class="card__tags [ l-cluster ]" role="list">
-                <li class="card__tag" data-type="edible">edible</li>
-                <li class="card__tag" data-season="fall">fall</li>
+              <ul
+                class="tags [ l-cluster ]"
+                role="list"
+                aria-label="Mushroom characteristics"
+              >
+                <li class="tag" data-type="edible">
+                  <span class="u-visually-hidden">This mushroom is</span> edible
+                </li>
+                <li class="tag" data-season="fall">
+                  <span class="u-visually-hidden">
+                    You can harvest this mushroom in the </span
+                  >fall
+                </li>
               </ul>
               <p>Fan-shaped caps growing in clusters</p>
               <div class="card__notes">
@@ -219,9 +275,19 @@
             </li>
             <li class="card">
               <h3 class="card__title">Lion’s Mane</h3>
-              <ul class="card__tags [ l-cluster ]" role="list">
-                <li class="card__tag" data-type="edible">edible</li>
-                <li class="card__tag" data-season="fall">fall</li>
+              <ul
+                class="tags [ l-cluster ]"
+                role="list"
+                aria-label="Mushroom characteristics"
+              >
+                <li class="tag" data-type="edible">
+                  <span class="u-visually-hidden">This mushroom is</span> edible
+                </li>
+                <li class="tag" data-season="fall">
+                  <span class="u-visually-hidden">
+                    You can harvest this mushroom in the </span
+                  >fall
+                </li>
               </ul>
               <p>White, shaggy appearance like a lion's mane</p>
               <div class="card__notes">
@@ -230,9 +296,19 @@
             </li>
             <li class="card">
               <h3 class="card__title">Destroying Angel</h3>
-              <ul class="card__tags [ l-cluster ]" role="list">
-                <li class="card__tag" data-type="toxic">toxic</li>
-                <li class="card__tag" data-season="summer">summer</li>
+              <ul
+                class="tags [ l-cluster ]"
+                role="list"
+                aria-label="Mushroom characteristics"
+              >
+                <li class="tag" data-type="toxic">
+                  <span class="u-visually-hidden">This mushroom is</span> toxic
+                </li>
+                <li class="tag" data-season="summer">
+                  <span class="u-visually-hidden">
+                    You can harvest this mushroom in the </span
+                  >summer
+                </li>
               </ul>
               <p>Pure white mushroom with a sack-like base</p>
               <div class="card__notes">
@@ -244,9 +320,19 @@
             </li>
             <li class="card">
               <h3 class="card__title">King Bolete</h3>
-              <ul class="card__tags [ l-cluster ]" role="list">
-                <li class="card__tag" data-type="edible">edible</li>
-                <li class="card__tag" data-season="summer">summer</li>
+              <ul
+                class="tags [ l-cluster ]"
+                role="list"
+                aria-label="Mushroom characteristics"
+              >
+                <li class="tag" data-type="edible">
+                  <span class="u-visually-hidden">This mushroom is</span> edible
+                </li>
+                <li class="tag" data-season="summer">
+                  <span class="u-visually-hidden">
+                    You can harvest this mushroom in the </span
+                  >summer
+                </li>
               </ul>
               <p>Large brown cap with thick stem</p>
               <div class="card__notes">
@@ -258,9 +344,19 @@
             </li>
             <li class="card">
               <h3 class="card__title">Shaggy Mane</h3>
-              <ul class="card__tags [ l-cluster ]" role="list">
-                <li class="card__tag" data-type="edible">edible</li>
-                <li class="card__tag" data-season="fall">fall</li>
+              <ul
+                class="tags [ l-cluster ]"
+                role="list"
+                aria-label="Mushroom characteristics"
+              >
+                <li class="tag" data-type="edible">
+                  <span class="u-visually-hidden">This mushroom is</span> edible
+                </li>
+                <li class="tag" data-season="fall">
+                  <span class="u-visually-hidden">
+                    You can harvest this mushroom in the </span
+                  >fall
+                </li>
               </ul>
               <p>Golden-yellow, funnel-shaped mushroom with false gills</p>
               <div class="card__notes">
@@ -272,9 +368,19 @@
             </li>
             <li class="card">
               <h3 class="card__title">Maitake</h3>
-              <ul class="card__tags [ l-cluster ]" role="list">
-                <li class="card__tag" data-type="edible">edible</li>
-                <li class="card__tag" data-season="fall">fall</li>
+              <ul
+                class="tags [ l-cluster ]"
+                role="list"
+                aria-label="Mushroom characteristics"
+              >
+                <li class="tag" data-type="edible">
+                  <span class="u-visually-hidden">This mushroom is</span> edible
+                </li>
+                <li class="tag" data-season="fall">
+                  <span class="u-visually-hidden">
+                    You can harvest this mushroom in the </span
+                  >fall
+                </li>
               </ul>
               <p>Large, feathery clusters with overlapping gray-brown caps</p>
               <div class="card__notes">
@@ -286,9 +392,19 @@
             </li>
             <li class="card">
               <h3 class="card__title">False Morel</h3>
-              <ul class="card__tags [ l-cluster ]" role="list">
-                <li class="card__tag" data-type="toxic">toxic</li>
-                <li class="card__tag" data-season="spring">spring</li>
+              <ul
+                class="tags [ l-cluster ]"
+                role="list"
+                aria-label="Mushroom characteristics"
+              >
+                <li class="tag" data-type="toxic">
+                  <span class="u-visually-hidden">This mushroom is</span> toxic
+                </li>
+                <li class="tag" data-season="spring">
+                  <span class="u-visually-hidden">
+                    You can harvest this mushroom in the </span
+                  >spring
+                </li>
               </ul>
               <p>Brain-like, reddish-brown cap with irregular shape</p>
               <div class="card__notes">
@@ -300,9 +416,19 @@
             </li>
             <li class="card">
               <h3 class="card__title">Matsutake</h3>
-              <ul class="card__tags [ l-cluster ]" role="list">
-                <li class="card__tag" data-type="edible">edible</li>
-                <li class="card__tag" data-season="fall">fall</li>
+              <ul
+                class="tags [ l-cluster ]"
+                role="list"
+                aria-label="Mushroom characteristics"
+              >
+                <li class="tag" data-type="edible">
+                  <span class="u-visually-hidden">This mushroom is</span> edible
+                </li>
+                <li class="tag" data-season="fall">
+                  <span class="u-visually-hidden">
+                    You can harvest this mushroom in the </span
+                  >fall
+                </li>
               </ul>
               <p>White to brown cap with thick stem and distinct spicy aroma</p>
               <div class="card__notes">
