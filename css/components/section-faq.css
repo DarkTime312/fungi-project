@@ -10,7 +10,7 @@
 }
 
 /* Name the different parts of a card */
-:where(.section-faq .card) {
+:where(.section-faq__grid) {
   .card__frame {
     grid-area: image;
   }
@@ -25,7 +25,7 @@
 }
 
 /* Name the cards */
-.card {
+.section-faq__grid .card {
   :where(&[data-name="start-foraging"]) {
     grid-area: start-foraging;
   }
