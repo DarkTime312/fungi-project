@@ -1,6 +1,5 @@
 .section-faq {
   --card-title-color: var(--clr-white);
-  --grid-gap: 1rem;
 
   background-color: var(--color-surface-lowest);
 
