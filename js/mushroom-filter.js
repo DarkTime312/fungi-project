@@ -62,3 +62,10 @@ if (seasonFilter && typeFilter && placeholderText) {
   // Sync visibility with the dropdowns when the page first loads.
   updateCardVisibility();
 }
+
+// Enable JavaScript if it's available
+function enableJavaScript() {
+  document.documentElement.classList.remove("no-js");
+}
+
+enableJavaScript();

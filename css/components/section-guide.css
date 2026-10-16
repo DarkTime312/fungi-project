@@ -30,3 +30,19 @@
     --tag-background-color: var(--clr-teal-500);
   }
 }
+
+/* Fallback for users that don't have javascript enabled */
+.no-js {
+  .section-guide:has(.dropdown-btn#seasons [value="spring"]:checked)
+    .card:not(:has([data-season="spring"])),
+  .section-guide:has(.dropdown-btn#seasons [value="summer"]:checked)
+    .card:not(:has([data-season="summer"])),
+  .section-guide:has(.dropdown-btn#seasons [value="fall"]:checked)
+    .card:not(:has([data-season="fall"])),
+  .section-guide:has(.dropdown-btn#mushroom-types [value="edible"]:checked)
+    .card:not(:has([data-type="edible"])),
+  .section-guide:has(.dropdown-btn#mushroom-types [value="toxic"]:checked)
+    .card:not(:has([data-type="toxic"])) {
+    display: none;
+  }
+}
