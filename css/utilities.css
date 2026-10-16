@@ -97,3 +97,8 @@
   clip: rect(0, 0, 0, 0); /* stylelint-disable-line */
   clip-path: inset(50%);
 }
+
+/* Ensure the native HTML hidden attribute always wins */
+[hidden] {
+  display: none;
+}

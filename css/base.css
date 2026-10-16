@@ -46,11 +46,6 @@ img:not([src$=".svg"]) {
   border-radius: var(--border-radius-l);
 }
 
-/* Ensure the native HTML hidden attribute always wins */
-[hidden] {
-  display: none !important;
-}
-
 /* Control how slow and smooth the cards rearrange */
 ::view-transition-group(*) {
   animation-duration: 0.5s;
