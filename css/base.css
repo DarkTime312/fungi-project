@@ -46,7 +46,11 @@ img:not([src$=".svg"]) {
   border-radius: var(--border-radius-l);
 }
 
-/* Control how slow and smooth the cards rearrange */
+@view-transition {
+  navigation: auto;
+}
+
+/* Control how slow and smooth individual elements (like cards) rearrange */
 ::view-transition-group(*) {
   animation-duration: 0.5s;
   animation-timing-function: cubic-bezier(
@@ -57,9 +61,16 @@ img:not([src$=".svg"]) {
   ); /* smooth deceleration */
 }
 
+/* Target the whole page transition. 
+      - Placed AFTER the (*) wildcard to ensure it overrides it. */
+::view-transition-group(root) {
+  animation-duration: 10s;
+}
+
 /* Respect users who prefer reduced motion */
 @media (prefers-reduced-motion: reduce) {
-  ::view-transition-group(*) {
-    animation-duration: 0.01s;
+  ::view-transition-group(*),
+  ::view-transition-group(root) {
+    animation-duration: 0.01s !important;
   }
 }
