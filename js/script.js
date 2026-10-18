@@ -33,4 +33,14 @@ hamburgerLinks.forEach(link => {
     });
 });
 
+// Temporarily disable all CSS animations and transitions 
+// whenever the browser window is being resized
+const resizeObserver = new ResizeObserver((entries) => {
+  document.body.classList.add("u-resize-animation-stopper");
 
+  requestAnimationFrame(() => {
+    document.body.classList.remove("u-resize-animation-stopper");
+  });
+});
+
+resizeObserver.observe(document.body);

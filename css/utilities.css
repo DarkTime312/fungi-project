@@ -102,3 +102,8 @@
 [hidden] {
   display: none;
 }
+
+.u-resize-animation-stopper * {
+  transition: none !important;
+  animation: none !important;
+}
