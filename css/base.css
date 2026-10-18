@@ -21,10 +21,6 @@ a {
 a:hover,
 a:focus-visible {
   color: var(--color-text-brand-hover);
-
-  @media (prefers-color-scheme: light) {
-    color: var(--clr-teal-500);
-  }
 }
 
 h2,
