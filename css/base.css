@@ -61,7 +61,7 @@ img:not([src$=".svg"]) {
 /* Target the whole page transition. 
       - Placed AFTER the (*) wildcard to ensure it overrides it. */
 ::view-transition-group(root) {
-  animation-duration: 10s;
+  animation-duration: 2s;
 }
 
 /* Respect users who prefer reduced motion */
